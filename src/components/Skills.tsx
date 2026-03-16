@@ -30,7 +30,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="relative bg-[#121212] py-32 px-8 md:px-24 overflow-hidden">
+    <section id="skills" className="relative bg-[#121212] py-20 px-4 sm:px-8 md:py-32 md:px-24 overflow-hidden">
       
       {/* Animated Background Glow */}
       <motion.div 
@@ -43,19 +43,19 @@ export default function Skills() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row gap-16 md:gap-24 items-center md:items-start">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-center md:items-start w-full">
           
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="md:w-1/3 sticky top-32 text-center md:text-left"
+            className="w-full md:w-1/3 relative md:sticky md:top-32 text-center md:text-left z-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tighter drop-shadow-xl inline-block">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 md:mb-6 tracking-tighter drop-shadow-xl inline-block">
               Tech Stack<span className="text-indigo-500">.</span>
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed font-light mt-4">
+            <p className="text-gray-400 text-base sm:text-lg leading-relaxed font-light mt-2 md:mt-4 max-w-lg mx-auto md:mx-0">
               A comprehensive toolkit that allows me to build scalable, full-stack applications from aesthetic frontends to robust backends.
             </p>
           </motion.div>
@@ -65,7 +65,7 @@ export default function Skills() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
-            className="md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+            className="w-full md:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6"
           >
             {skills.map((skill, index) => (
               <motion.div 
@@ -78,7 +78,7 @@ export default function Skills() {
                   scale: { type: "spring", stiffness: 300, damping: 20 },
                   rotate: { type: "spring", stiffness: 300, damping: 20 }
                 }}
-                className="group flex flex-col items-center justify-center gap-5 p-8 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl transition-colors duration-500 hover:bg-white/[0.08] hover:border-white/20 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] cursor-default overflow-hidden relative"
+                className="group flex flex-col items-center justify-center gap-3 sm:gap-5 p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl transition-colors duration-500 hover:bg-white/[0.08] hover:border-white/20 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] cursor-default overflow-hidden relative"
               >
                 {/* Radial gradient background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -86,7 +86,7 @@ export default function Skills() {
                 <div className="text-gray-500 group-hover:text-indigo-400 transition-colors duration-500 relative z-10 transform group-hover:scale-110">
                   {skill.icon}
                 </div>
-                <span className="text-gray-400 group-hover:text-white font-semibold tracking-wide transition-colors duration-500 relative z-10">
+                <span className="text-sm md:text-base text-gray-400 group-hover:text-white font-semibold tracking-wide transition-colors duration-500 relative z-10 text-center">
                   {skill.name}
                 </span>
               </motion.div>
