@@ -11,9 +11,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Creative Developer | Portfolio",
   description: "A high-end scrollytelling personal portfolio.",
-  verification: {
-    google: "",
-  }
 };
 
 export default function RootLayout({
